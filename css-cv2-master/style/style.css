@@ -1,0 +1,178 @@
+
+* {
+    box-sizing: border-box;
+    font-family: Arial, Verdana, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+header > div {
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: gray;
+  
+}
+
+hgroup {
+    color: red;
+    margin-top: 27px;
+    margin-left: 15%;
+}
+
+header > div h1 {
+    font-size: 1.6em;
+}
+
+header > div h2 {
+    font-size: 1.5em;
+}#contact {
+    display:grid;
+    grid-template-columns: 1fr 5fr;
+    position:absolute;
+    background-color: gray;
+    font-size: 14px;
+    top:10px; 
+    right:0;
+    background-color: black;
+    align-items: center;
+
+}
+.contacts{
+    width: auto; 
+    height: auto;
+    background-color: red; 
+
+}
+.contact-type {
+    grid-column:1;
+color:white;
+    display:inline-block;
+}
+.contact-value{
+    grid-column:2;
+display:inline-block;
+  position:absolute;
+  left:0;
+  margin-left:9px;
+}
+.contact-value > a{
+    color:red;
+    text-decoration: none;
+}
+#contact h3 {
+    position:absolute;
+    z-index:-1;
+}
+
+.contacts > dl {
+    margin: 7px 0 ; 
+}
+
+.content > section h3::before{
+    content:"🔴 ";
+}
+
+.content > section h3{
+    border-bottom:1px solid lightgray;
+    padding-bottom:4px;
+
+}
+
+.content{
+    margin:5% 15%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+#competencies > .skills-primary::before{
+content:"Main";
+}
+#competencies > .skills-secondary::before{
+    content:"Other";
+    }
+    
+#competencies > .skills>.skill{
+    width:100%;
+    background-color: lightgray;
+    margin:0 0 10px 0;
+    padding:5px;
+}
+#competencies > .skills>.skill>span{
+    color:white;
+background-color:red;
+display: inline-block;
+font-size:0.9em;
+padding: 5px;
+}
+
+.skill[data-skill="5"] span {
+    width: 50%;
+}
+
+.skill[data-skill="3"] span {
+    width: 30%;
+}
+
+.skill[data-skill="1"] span {
+    width: 10%;
+}
+
+.skill[data-skill="9"] span {
+    width: 90%;
+}
+
+.skill[data-skill="7"] span {
+    width: 70%;
+}
+
+.experience h4{
+    color:red;
+
+}
+h4 .experience-institution::before,h4 .experience-institution{
+    content:' @ ';
+    font-weight:normal;
+}
+.experience-details::before,.experience-details{
+    content:"In ";
+    color:lightgray;
+}
+.experience-date-separator{
+    color:lightcoral;
+}
+
+@media only screen and (max-width: 767px) {
+    .content {
+        grid-template-columns: 1fr; 
+    }
+
+    #contact {
+        position: relative; 
+    }
+
+    header > div {
+        
+        display:inline-block;  
+        padding-left:70px;     
+        padding-top:30px;
+    }
+    header > div hgroup , div figure {
+        margin: 0;
+    
+       
+    }
+    figure{
+        padding-bottom:30px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width:1024px){
+    #contact {
+        grid-template-columns: 1fr 3fr; 
+    }
+}
+
